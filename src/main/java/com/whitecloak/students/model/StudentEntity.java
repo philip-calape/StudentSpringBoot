@@ -1,4 +1,4 @@
-package com.whitecloak.digitalbank.model;
+package com.whitecloak.students.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -10,8 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "users")
-public class UserEntity {
+@Table(name = "students")
+public class StudentEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,13 +25,13 @@ public class UserEntity {
     @Column(name = "last_name")
     private String lastName;
 
-    public UserEntity(Long id, String firstName, String lastName) {
+    public StudentEntity(Long id, String firstName, String lastName) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    public UserEntity() {
+    public StudentEntity() {
     }
 
     public Long getId() {
